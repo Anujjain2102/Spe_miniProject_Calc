@@ -1,6 +1,6 @@
 pipeline {
     environment{
-        PATH="/opt/apache-maven-3.9.0/bin:$PATH"
+        imageName=""
     }
     agent any
     stages {
@@ -12,7 +12,6 @@ pipeline {
         stage('Maven Build') {
             steps {
                 script{
-                    sh 'PATH="/opt/apache-maven-3.9.0/bin:$PATH"'
                     sh 'mvn clean install'
                 }
             }
