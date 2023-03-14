@@ -1,5 +1,6 @@
 pipeline {
     environment{
+        PATH="/opt/apache-maven-3.9.0/bin:$PATH"
         imageName=""
     }
     agent any
