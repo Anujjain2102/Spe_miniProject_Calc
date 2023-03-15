@@ -34,5 +34,11 @@ pipeline {
                 }
             }
         }
+        stage('Deploy') {
+            steps {
+                ansiblePlaybook becomeUser: null, colorized: true, disableHostKeyChecking: true, installation: 'Ansible', inventory: 'deploy-docker/inventory',
+                 playbook: 'deploy-docker/spe-deploy.yml', sudoUser: null, extras: '-e "image_name=anuj2102/spe_miniproject"'
+            }
+        }
     }
 }
