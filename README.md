@@ -1,1 +1,1 @@
-# Spe_miniProject_Calc
+# Spe_miniProject_Cal
